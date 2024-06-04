@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Monuments</h1>
+
+<div data-controller='form-submit'>
+  <div id="monuments" data-form-submit-target="list">
+    <% @monuments.each do |monument| %>
+      <%= render monument %>
+    <% end %>
+
+    <%# add the new monument %>
+  </div>
+  <%#= link_to "New monument", new_monument_path %>
+  data-controller MUST HAVE ACCESS TO THE TARGETS AND ACTIONS
+  <div data-controller='insert-in-list'>
+    <button class="btn btn-primary" data-action='click->insert-in-list#send'>New monument</button>
+    <div data-insert-in-list-target="toggable" class="d-none">
+      <%= render 'form', monument: @monument %>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,4 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+1. display the form in the index page
+2. The form should be hidden at first
+3. user clicks on the button
+4. display the form
